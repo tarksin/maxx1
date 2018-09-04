@@ -1,0 +1,27 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="jumbotron">
+    <h2>Add a staff member 1126</h2>
+
+    <form method="POST">
+
+    {{form.hidden_tag()}}
+
+    {{form.first_name.label}} {{form.first_name()}}
+    <br>
+    {{form.last_name.label}} {{form.last_name()}}
+    <br>
+    {{form.degree.label}} {{form.degree()}}
+    <br>
+    {{form.title.label}} {{form.title()}}
+    <br>
+    {{form.role.label}} {{form.role()}}
+    <br>
+    {{form.center_id.label}} {{form.center_id()}}
+    <br>
+    {{form.submit()}}
+
+    </form>
+</div>
+{% endblock %}

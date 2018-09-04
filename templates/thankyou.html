@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maxxima</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+
+</head>
+<body>
+
+{% for msg in get_flashed_messages() %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <button type="button" class=" fade close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <h3>{{msg}}</h3>
+
+</div>
+
+{% endfor %}
+
+
+<div class="jumbotron">
+    <p>thankyou.html</p>
+     <h4>Added to the register:</h4>
+    <h2>                        {{session['center_name']}}</h2>
+    <h3>Director:                  {{session['director']}}</h3>
+    <h3>Undergrad research:       {{session['undergrad']}}</h3>
+    <h3>Primary research field: {{session['prime_field']}}</h3>
+    <h3>Budget                       {{session['budget']}}</h3>
+    <h3>Funds source:          {{session['funds_source']}}</h3>
+    <h3>Link:                           {{session['url']}}</h3>
+    <h3>Mission statement:          {{session['mission']}}</h3>
+
+</div>
+</body>
+</html>

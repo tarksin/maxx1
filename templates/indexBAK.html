@@ -1,0 +1,26 @@
+  {% extends "base.html" %}
+  {% block content %}
+
+ <div class="jumbotron">
+<h1>index.html</h1>
+    <h5>Kansas State University Research Centers</h5>
+    <p> </p>
+    <a href="{{url_for('signup')}}">Register</a> a new research center
+</div>
+
+  <img src="../static/{{img}}" height="200" width="245" alt="laptop">
+  <br />
+  <hr />
+  <br />
+  <h1>{{center_name}}</h1>
+<ul>
+  {% for center in centers %}
+  {% if center["director"] %}
+  <li>{{center["name"]}}  :  {{center["director"]}}</li>
+  {% else %}
+  <li>{{center["name"]}}</li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+  {% endblock %}

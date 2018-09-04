@@ -1,0 +1,20 @@
+    {% extends "base.html"  %}
+    {% block content %}
+<div class="jumbotron">
+<h3>Kansas State University Research Centers</h3>
+    <ul>
+    {% for center in centers%}
+        <li>
+            {{center.name}}  ({{center.id}})
+            <ul>
+               <li>Director: {{center.director}}</li>
+               <li>Web site: {{center.url}}</li>
+               <li>Field: {{center.primary_field}}</li>
+               <li>Budget: {{center.budget}}</li>
+               <li>Mission: {{center.mission}}</li>
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+    {% endblock %}

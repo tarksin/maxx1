@@ -1,0 +1,18 @@
+    {% extends "base.html"  %}
+    {% block content %}
+<div class="jumbotron">
+<h3>Kansas State University Research Centers Staff</h3>
+    <ul>
+    {% for staffer in staffers%}
+        <li>
+            {{staffer.first_name}}  {{staffer.last_name}}, {{staffer.degree}}
+            <ul>
+               <li>Title: {{staffer.title}}</li>
+               <li>Role: {{staffer.role}}</li>
+               <li>Center_id: {{staffer.center_id}}</li>
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+    {% endblock %}

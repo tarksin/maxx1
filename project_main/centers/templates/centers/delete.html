@@ -1,0 +1,17 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="jumbotron">
+    <h2>Remove a research center</h2>
+
+    <form method="POST">
+
+    {{form.hidden_tag()}}
+    {{form.id.label}} {{form.id()}}
+    <br>
+    <br>
+    {{form.submit()}}
+
+    </form>
+</div>
+{% endblock %}

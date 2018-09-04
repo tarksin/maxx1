@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+  {% block content %}
+<h1>center.html</h1>
+<h2>{{center["name"]}}</h2>
+
+<h4> Director: {{center["director"]}}</h4>
+<br>
+<h5>Staff:</h5>
+<ul>
+  {% for staffer in center["staffers"] %}
+  <li>
+    {{ staffer.first_name }} {{ staffer.last_name }}
+  </li>
+  {% endfor %}
+</ul>
+
+  {% endblock %}
+
+
+center.html

@@ -1,0 +1,37 @@
+<h1>flask_form.html</h1>
+<p>
+    {% if center_name %}
+
+    The new center is {{center_name}}
+    The director is {{director}}
+    Update it in the form below:
+
+    {% else %}
+
+    Please enter the new center's name and director:
+
+    {% endif %}
+</p>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+    {{ form.center_name.label }} {{ form.center_name() }}
+    <br>
+    {{ form.director.label }} {{ form.director() }}
+    <br>
+    {{ form.undergrad.label }} {{ form.undergrad() }}
+    <br>
+    {{ form.prime_field.label }} {{ form.prime_field() }}
+    <br>
+    {{ form.budget.label }} {{ form.budget() }}
+    <br>
+    {{ form.mission.label }} {{ form.mission() }}
+    <br>
+    {{ form.url.label }} {{ form.url() }}
+    <br>
+    {{ form.submit() }}
+
+
+
+</form>
